@@ -8,5 +8,5 @@ dt {
 }
 
 .header-v4__bg {
-  background-image: url(/assets/images/generic.4dc91de4.jpg);
+  background-image: url(/assets/images/generic.4dc91de4.jpg) !important;
 }
