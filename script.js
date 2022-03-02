@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         osu-website-rework
 // @namespace    http://kai-huang.com/
-// @version      1.1.1
+// @version      1.2
 // @description  no offense but this web rework looks awful
 // @author       ThunderBird2678
 // @match        https://osu.ppy.sh/*
@@ -26,6 +26,8 @@ $(window).on("load", function () {
     .detach()
     .appendTo("div .profile-info__details")
     .css("padding-right", "20px");
+
+  console.log($(".profile-detail__chart-numbers").exists());
 
   // add more padding to badges display and add bottom border
   $(".profile-badges").css("padding", "10px 0 20px 0");
@@ -71,5 +73,4 @@ $(window).on("load", function () {
 
   $("dt").css("flex-grow", "1");
   $("dd").css("margin-left", "revert").css("text-align", "end");
-  $(".header-v4__bg").css("background","url(/assets/images/generic.4dc91de4.jpg)");
 });
