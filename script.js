@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         osu-website-rework
 // @namespace    http://kai-huang.com/
-// @version      1.0
+// @version      1.1
 // @description  no offense but this web rework looks awful
 // @author       ThunderBird2678
 // @match        https://osu.ppy.sh/*
 // @require      https://code.jquery.com/jquery-3.6.0.slim.min.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=ppy.sh
-// @grant        none
+// @grant        GM_addStyle
+// @grant        GM_getResourceText
+// @resource     customCSS   https://raw.githubusercontent.com/k74huang/osu-website-rework/main/additionalstyles.css
 // ==/UserScript==
 /* globals jQuery, $, waitForKeyElements */
 
@@ -16,6 +18,8 @@ $.fn.exists = function () {
 };
 
 $(window).on("load", function () {
+  var cssTxt  = GM_getResourceText("customCSS");
+  GM_addStyle (cssTxt);
   // move where the global / country ranks are
   $(".profile-detail__chart-numbers")
     .has('div:contains("Global Ranking")')
