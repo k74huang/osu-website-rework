@@ -1,0 +1,12 @@
+.profile-stats__entry {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+dt {
+  flex-grow: 1;
+}
+
+.header-v4__bg {
+  background-image: url(/assets/images/generic.4dc91de4.jpg);
+}
